@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-sand-50 text-sand-900 font-sans antialiased;
+}
+
+@layer components {
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full bg-brand-600 px-7 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/25 transition-all duration-300 hover:bg-brand-700 hover:shadow-xl hover:shadow-brand-600/30 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2;
+  }
+  .btn-whatsapp-lg {
+    @apply px-8 py-4 text-lg whitespace-nowrap;
+  }
+  /* Telas estreitas (ex.: 375px): botão mais compacto para caber em uma linha */
+  @media (max-width: 26rem) {
+    .btn-whatsapp-lg {
+      @apply px-5 text-base;
+    }
+  }
+}
